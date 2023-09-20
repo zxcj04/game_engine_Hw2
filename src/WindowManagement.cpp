@@ -1,6 +1,6 @@
 #include <WindowManagement.hpp>
 
-#define GLFW_MINOR_VERSION 6
+#define GLFW_MINOR_VERSION 1
 
 WindowManagement::WindowManagement()
 {
@@ -106,7 +106,7 @@ bool WindowManagement::init(string window_name)
     ImGui::CreateContext();
     ImGui::StyleColorsDark();
     ImGui_ImplGlfw_InitForOpenGL(this->window, true);
-    ImGui_ImplOpenGL3_Init("#version 460");
+    ImGui_ImplOpenGL3_Init("#version 410");
 
     ImGuiIO &io = ImGui::GetIO();
     io.ConfigFlags |= ImGuiConfigFlags_NoMouse;
